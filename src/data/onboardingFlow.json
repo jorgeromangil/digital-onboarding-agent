@@ -1,0 +1,170 @@
+{
+  "onboarding_id": "Aamerly",
+  "flowDefinition": [
+    {
+      "id": "WELCOME",
+      "next": "MENU",
+      "nextCondition": "always"
+    },
+    {
+      "id": "MENU",
+      "next": "CAPTURING",
+      "nextCondition": "always"
+    },
+    {
+      "id": "CAPTURING",
+      "next": "VALIDATING",
+      "nextCondition": "allCapturesComplete"
+    },
+    {
+      "id": "VALIDATING",
+      "next": "FINISH",
+      "nextCondition": "validationSuccess"
+    }
+  ],
+  "globalSteps": {
+    "WELCOME": {
+      "id": "WELCOME",
+      "text": "Bienvenido al proceso de onboarding. Soy tu asistente y te guiaré paso a paso.",
+      "audio": "/audios/bienvenida.mp3",
+      "type": "info",
+      "infoSection": {
+        "title": "Capturas necesarias",
+        "cards": [
+          {
+            "id": "DOCUMENT",
+            "label": "Foto de tu DNI",
+            "icon": "id_card",
+            "description": "Muestra la parte frontal con tu foto y datos legibles"
+          },
+          {
+            "id": "FACE",
+            "label": "Foto de tu cara",
+            "icon": "familiar_face_and_zone",
+            "description": "Muestra tu cara mirando a la cámara de frente"
+          }
+        ]
+      }
+    },
+    "MENU": {
+      "id": "MENU",
+      "text": "Puedes capturar tu DNI y tu cara en el orden que prefieras. Cuando detecte cada uno, haré la captura y lo marcaré como completado.",
+      "type": "info"
+    },
+    "CAPTURING": {
+      "id": "AUTO_CAPTURE",
+      "text": "",
+      "type": "video_auto",
+      "action": "capture_auto",
+      "detection": {
+        "captureHoldMs": 900,
+        "faceCaptureHoldMs": 650
+      },
+      "messages": {
+        "guidance": {
+          "SEARCHING": {
+            "text": "Estoy buscando DNI o cara. Puedes mostrar cualquiera de los dos.",
+            "voice": "Estoy buscando DNI o cara."
+          },
+          "DOC_SEARCHING": {
+            "text": "Muestra tu DNI. Necesito ver tu DNI claramente.",
+            "voice": "Muestra tu DNI. Necesito ver tu DNI claramente."
+          },
+          "DOC_FACE_REQUIRED": {
+            "text": "Veo el DNI, pero necesito detectar la foto facial del DNI. Acércalo y evita reflejos sobre la foto.",
+            "voice": "Veo el DNI, pero necesito detectar la foto. Acércalo y evita reflejos."
+          },
+          "DOC_ALIGNED": {
+            "text": "DNI bien encuadrado. Capturo automáticamente en un instante.",
+            "voice": "DNI bien encuadrado."
+          },
+          "FACE_SEARCHING": {
+            "text": "Muestra tu cara. Necesito ver tu cara claramente.",
+            "voice": "Muestra tu cara. Necesito ver tu cara claramente."
+          },
+          "FACE_ALIGNED": {
+            "text": "Cara bien encuadrada. Capturo automáticamente en un instante.",
+            "voice": "Cara bien encuadrada."
+          }
+        },
+        "capture": {
+          "DOCUMENT": {
+            "success": "DNI capturado.",
+            "error": "No pude capturar el DNI. Revisa la cámara e intentalo de nuevo."
+          },
+          "FACE": {
+            "success": "Cara capturada.",
+            "error": "No pude capturar tu cara. Revisa la cámara e intentalo de nuevo."
+          }
+        },
+        "firstCapture": "Muestra primero tu DNI o tu cara, en el orden que prefieras.",
+        "oneRemaining": "Perfecto. Ahora muestra tu {remaining}.",
+        "multipleRemaining": "Sigue mostrando DNI o cara para completar la verificación."
+      }
+    },
+    "VALIDATING": {
+      "id": "VALIDATING",
+      "text": "Ya tengo ambas capturas. Ahora haré la validación biométrica final.",
+      "type": "info",
+      "action": "face_match",
+      "messages": {
+        "validating": "Validando identidad. Estoy comparando tu cara con la foto del DNI.",
+        "matching": {
+          "comparing": {
+            "text": "Comparando datos biométricos...",
+            "voice": "Comparando datos biométricos..."
+          },
+          "success": {
+            "text": "Identidad verificada. Tus datos coinciden con tu DNI. Bienvenido.",
+            "voice": "Identidad verificada. Tus datos coinciden con tu DNI. Bienvenido."
+          },
+          "failed": {
+            "text": "Ataque detectado: los datos no coinciden con la identidad esperada.",
+            "voice": "Ataque detectado. Los datos no coinciden con la identidad esperada."
+          },
+          "missingDocument": {
+            "text": "Necesito la captura del DNI frontal para poder validar tu identidad. Completa primero ese paso.",
+            "voice": "Necesito la captura del DNI frontal para validar tu identidad."
+          },
+          "missingFace": {
+            "text": "Necesito la captura de tu cara para poder validar tu identidad. Completa primero ese paso.",
+            "voice": "Necesito la captura de tu cara para validar tu identidad."
+          },
+          "badDocumentQuality": {
+            "text": "No detecté claramente la foto facial del DNI frontal. La imagen tiene baja calidad. Repite la captura frontal para continuar.",
+            "voice": "No detecté claramente la foto facial del DNI frontal. Repite la captura frontal."
+          },
+          "badFaceQuality": {
+            "text": "No pude obtener una lectura facial fiable de tu cara. La imagen tiene baja calidad. Recolócate y vuelve a validar tu cara.",
+            "voice": "No pude obtener una lectura facial fiable. Recolócate y vuelve a validar tu cara."
+          },
+          "error": {
+            "text": "Se produjo un error durante la validación biométrica. Reintenta en unos segundos.",
+            "voice": "Se produjo un error durante la validación biométrica. Reintenta en unos segundos."
+          }
+        }
+      }
+    },
+    "FINISH": {
+      "id": "FINISH",
+      "text": "Perfecto, tu identidad está verificada. El onboarding ha finalizado con éxito.",
+      "audio": "/audios/identity_confirmed.mp3",
+      "type": "info",
+      "messages": {
+        "completion": "Proceso de Onboarding finalizado con éxito."
+      }
+    }
+  },
+  "captures": [
+    {
+      "id": "DOCUMENT",
+      "label": "DNI",
+      "icon": "document"
+    },
+    {
+      "id": "FACE",
+      "label": "cara",
+      "icon": "face"
+    }
+  ]
+}
