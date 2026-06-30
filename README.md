@@ -14,15 +14,11 @@ Unlike traditional approaches with rigid sequential flows, this agent enables in
 <img width="3840" height="2160" alt="features" src="https://github.com/user-attachments/assets/916c235f-6737-4025-82fa-74bc9899bbd1" />
 
 
-✨ **Automatic Document Detection** - Intelligent capture of identity documents using computer vision
-
-👤 **Facial Recognition** - Biometric facial analysis for identity validation
-
-🔄 **Flexible AI-Driven Flow** - Dynamic flow orchestration configured via JSON, adaptable to context
-
-⏱️ **Real-Time Capture** - Automatic processing of biometric data without manual intervention
-
-🎯 **State Machine** - Data-driven architecture that adapts the flow based on user actions
+- **Automatic Document Detection** - Intelligent capture of identity documents using computer vision
+- **Facial Recognition** - Biometric facial analysis for identity validation
+- **Flexible AI-Driven Flow** - Dynamic flow orchestration configured via JSON, adaptable to context
+- **Real-Time Capture** - Automatic processing of biometric data without manual intervention
+- **State Machine** - Data-driven architecture that adapts the flow based on user actions
 
 ## Technologies
 
@@ -83,37 +79,33 @@ src/
 - `npm run preview` - Preview production build locally
 - `npm run lint` - Run ESLint to check code quality
 
-## ⚠️ DISCLAIMER - Academic Research Project
+## DISCLAIMER - Academic Research Project
 
 **This is an academic research project developed as a Final Degree Project (TFG). It is not intended for production use.**
 
 ### Important Limitations:
 
-- 🔓 **Security:** This prototype does NOT implement professional-level security measures required for production systems (end-to-end encryption, advanced spoofing protection, biometric certification, etc.)
-
-- 👤 **Privacy:** Biometric data is processed locally in the browser, but this system does NOT comply with regulations such as GDPR, CCPA, or other data protection legislation
-
-- 🔐 **Biometric Validation:** The algorithms used are academic demonstrations and should NOT be considered robust enough for real transactions or regulatory compliance (KYC)
-
-- ⚙️ **Reliability:** This system is an experimental prototype. Its consistent operation across all scenarios is not guaranteed
-
-- 📋 **Regulatory Compliance:** This project does NOT comply with regulations such as PLDFT, AML (Anti-Money Laundering) standards, or certification requirements in financial or identification systems
+- **Security:** This prototype does NOT implement professional-level security measures required for production systems (end-to-end encryption, advanced spoofing protection, biometric certification, etc.)
+- **Privacy:** Biometric data is processed locally in the browser, but this system does NOT comply with regulations such as GDPR, CCPA, or other data protection legislation
+- **Biometric Validation:** The algorithms used are academic demonstrations and should NOT be considered robust enough for real transactions or regulatory compliance (KYC)
+- **Reliability:** This system is an experimental prototype. Its consistent operation across all scenarios is not guaranteed
+- **Regulatory Compliance:** This project does NOT comply with regulations such as PLDFT, AML (Anti-Money Laundering) standards, or certification requirements in financial or identification systems
 
 ### Recommendations:
 
-- ✅ Use only for educational and research purposes
-- ✅ Do not process real user data without explicit consent
-- ✅ For production applications, consult certified third-party solutions
-- ✅ Conduct professional security audits before any deployment
+- Use only for educational and research purposes
+- Do not process real user data without explicit consent
+- For production applications, consult certified third-party solutions
+- Conduct professional security audits before any deployment
 
 ## Results and Findings
 
 This project demonstrates that flow flexibility and capture automation can significantly improve:
 
-- 📉 Reduction of drop-off rates in onboarding processes
-- 🎯 Better user experience through proactive interaction
-- ⚡ Real-time processing of biometric validations
-- 🔄 Adaptability to different scenarios and use contexts
+- Reduction of drop-off rates in onboarding processes
+- Better user experience through proactive interaction
+- Real-time processing of biometric validations
+- Adaptability to different scenarios and use contexts
 
 ## Author
 
