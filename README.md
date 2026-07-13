@@ -113,8 +113,4 @@ Jorge Román - Final Degree Project (TFG)
 
 ## License
 
-This project is open source for academic and educational purposes only.
-
----
-
-**Last updated:** June 2026
+This project is licensed under the GNU General Public License v3.0 (GPLv3). This is a "copyleft" license, which means that any derivative work you distribute must also be licensed under the GPLv3, ensuring the software and its modifications remain free and open-source for all users.
