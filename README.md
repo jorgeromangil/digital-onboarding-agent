@@ -115,9 +115,7 @@ This project demonstrates that flow flexibility and capture automation can signi
 
 ## License
 
-This project is licensed under the **GNU General Public License v3.0 (GPLv3)** - see the [LICENSE](LICENSE) file for details.
-
-This is a "copyleft" license, ensuring that this software and its modifications remain free and open-source. 
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
 ### Third-Party Licenses
 
