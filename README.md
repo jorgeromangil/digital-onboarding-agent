@@ -9,24 +9,26 @@ Web application developed as a prototype of an automated digital onboarding agen
 
 Unlike traditional approaches with rigid sequential flows, this agent enables intuitive real-time interaction: users can present either their face or identity document interchangeably, while the system automatically detects and processes the captures.
 
+This project was developed as my Final Degree Project (TFG) for the Multimedia Engineering degree at the University of Alicante.
+
 ## Key Features
 
 <img width="3840" height="2160" alt="features" src="https://github.com/user-attachments/assets/916c235f-6737-4025-82fa-74bc9899bbd1" />
 
 
-- **Automatic Document Detection** - Intelligent capture of identity documents using computer vision
-- **Facial Recognition** - Biometric facial analysis for identity validation
-- **Flexible AI-Driven Flow** - Dynamic flow orchestration configured via JSON, adaptable to context
-- **Real-Time Capture** - Automatic processing of biometric data without manual intervention
-- **State Machine** - Data-driven architecture that adapts the flow based on user actions
+* **Automatic Document Detection** - Intelligent capture of identity documents using computer vision
+* **Facial Recognition** - Biometric facial analysis for identity validation
+* **Flexible AI-Driven Flow** - Dynamic flow orchestration configured via JSON, adaptable to context
+* **Real-Time Capture** - Automatic processing of biometric data without manual intervention
+* **State Machine** - Data-driven architecture that adapts the flow based on user actions
 
 ## Technologies
 
-- **Frontend:** React + Vite
-- **Document Detection:** [Scanic](https://github.com/marquaye/scanic) - automatic document detection
-- **Facial Recognition:** [face-api.js](https://github.com/justadudewhohacks/face-api.js) - facial analysis based on TensorFlow.js
-- **Flow Configuration:** JSON + Custom state machine
-- **Biometric Modeling:** Based on 128-dimensional facial descriptor
+* **Frontend:** React + Vite
+* **Document Detection:** [Scanic](https://github.com/marquaye/scanic) - automatic document detection
+* **Facial Recognition:** [face-api.js](https://github.com/justadudewhohacks/face-api.js) - facial analysis based on TensorFlow.js
+* **Flow Configuration:** JSON + Custom state machine
+* **Biometric Modeling:** Based on 128-dimensional facial descriptor
 
 ## Installation
 
@@ -74,10 +76,10 @@ src/
 
 ## Available Commands
 
-- `npm run dev` - Start development server with hot reload
-- `npm run build` - Build the project for production
-- `npm run preview` - Preview production build locally
-- `npm run lint` - Run ESLint to check code quality
+* `npm run dev` - Start development server with hot reload
+* `npm run build` - Build the project for production
+* `npm run preview` - Preview production build locally
+* `npm run lint` - Run ESLint to check code quality
 
 ## DISCLAIMER - Academic Research Project
 
@@ -85,32 +87,41 @@ src/
 
 ### Important Limitations:
 
-- **Security:** This prototype does NOT implement professional-level security measures required for production systems (end-to-end encryption, advanced spoofing protection, biometric certification, etc.)
-- **Privacy:** Biometric data is processed locally in the browser, but this system does NOT comply with regulations such as GDPR, CCPA, or other data protection legislation
-- **Biometric Validation:** The algorithms used are academic demonstrations and should NOT be considered robust enough for real transactions or regulatory compliance (KYC)
-- **Reliability:** This system is an experimental prototype. Its consistent operation across all scenarios is not guaranteed
-- **Regulatory Compliance:** This project does NOT comply with regulations such as PLDFT, AML (Anti-Money Laundering) standards, or certification requirements in financial or identification systems
+* **Security:** This prototype does NOT implement professional-level security measures required for production systems (end-to-end encryption, advanced spoofing protection, biometric certification, etc.)
+* **Privacy:** Biometric data is processed locally in the browser, but this system does NOT comply with regulations such as GDPR, CCPA, or other data protection legislation
+* **Biometric Validation:** The algorithms used are academic demonstrations and should NOT be considered robust enough for real transactions or regulatory compliance (KYC)
+* **Reliability:** This system is an experimental prototype. Its consistent operation across all scenarios is not guaranteed
+* **Regulatory Compliance:** This project does NOT comply with regulations such as PLDFT, AML (Anti-Money Laundering) standards, or certification requirements in financial or identification systems
 
 ### Recommendations:
 
-- Use only for educational and research purposes
-- Do not process real user data without explicit consent
-- For production applications, consult certified third-party solutions
-- Conduct professional security audits before any deployment
+* Use only for educational and research purposes
+* Do not process real user data without explicit consent
+* For production applications, consult certified third-party solutions
+* Conduct professional security audits before any deployment
 
 ## Results and Findings
 
 This project demonstrates that flow flexibility and capture automation can significantly improve:
 
-- Reduction of drop-off rates in onboarding processes
-- Better user experience through proactive interaction
-- Real-time processing of biometric validations
-- Adaptability to different scenarios and use contexts
+* Reduction of drop-off rates in onboarding processes
+* Better user experience through proactive interaction
+* Real-time processing of biometric validations
+* Adaptability to different scenarios and use contexts
 
 ## Author
 
-Jorge Román - Final Degree Project (TFG)
+* **Jorge Román Gil** - [@jorgeromangil](https://github.com/jorgeromangil)
 
 ## License
 
-This project is licensed under the GNU General Public License v3.0 (GPLv3). This is a "copyleft" license, which means that any derivative work you distribute must also be licensed under the GPLv3, ensuring the software and its modifications remain free and open-source for all users.
+This project is licensed under the **GNU General Public License v3.0 (GPLv3)** - see the [LICENSE](LICENSE) file for details.
+
+This is a "copyleft" license, ensuring that this software and its modifications remain free and open-source. 
+
+### Third-Party Licenses
+
+This project integrates open-source libraries that are distributed under their respective licenses:
+
+* **face-api.js** (by Vladimir Mandic) - Licensed under the [MIT License](https://github.com/vladmandic/face-api/blob/master/LICENSE)
+* **Scanic** (by marquaye) - Licensed under the [MIT License](https://github.com/marquaye/scanic/blob/main/LICENSE)
