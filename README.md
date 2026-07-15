@@ -9,7 +9,7 @@ Web application developed as a prototype of an automated digital onboarding agen
 
 Unlike traditional approaches with rigid sequential flows, this agent enables intuitive real-time interaction: users can present either their face or identity document interchangeably, while the system automatically detects and processes the captures.
 
-This project was developed as my Final Degree Project (TFG) for the Multimedia Engineering degree at the University of Alicante.
+This project was developed as my Final Degree Project (TFG) for the Multimedia Engineering degree at the University of Alicante. You can access the [complete project report on the RUA institutional repository](https://hdl.handle.net/10045/168382).
 
 ## Key Features
 
